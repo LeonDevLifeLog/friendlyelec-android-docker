@@ -1,6 +1,8 @@
 FROM ubuntu:18.04
 MAINTAINER Lawrence-Tang <tangzongsheng@gmail.com>
 
+RUN mv /etc/apt/sources.list /etc/apt/sourses.list.backup
+ADD sources.list /etc/apt/sources.list
 RUN apt-get update; apt-get install -y openjdk-8-jdk bc python rsync \
     git-core gnupg flex bison gperf build-essential \
     zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 \
