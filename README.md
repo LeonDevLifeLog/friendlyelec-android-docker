@@ -1,5 +1,9 @@
 ## **FriendlyELEC-Android-Docker**
 
+> 针对中国环境做了一些优化
+>   * ubuntu源换成阿里云的镜像
+>   * repo已经安装，并且使用清华镜像
+
 This docker image is used to build android open source project for FriendlyELEC's boards, support for the following android versions:  
 * Android7 (for RK3399)  
 * Android5.1 (for S5P4418/S5P6818)  
