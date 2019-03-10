@@ -18,5 +18,8 @@ ADD http://112.124.9.243/docker-files/java-7u171-openjdk-amd64.tgz /usr/lib/jvm/
 RUN tar xzf /usr/lib/jvm/java-7u171-openjdk-amd64.tgz -C /usr/lib/jvm/ && rm -f /usr/lib/jvm/java-7u171-openjdk-amd64.tgz
 ADD http://112.124.9.243/docker-files/sun-jdk-6u45.tgz /usr/lib/jvm/
 RUN tar xzf /usr/lib/jvm/sun-jdk-6u45.tgz -C /usr/lib/jvm/ && rm -f /usr/lib/jvm/sun-jdk-6u45.tgz
+ENV REPO_URL https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/
+ADD https://mirrors.tuna.tsinghua.edu.cn/git/git-repo /usr/local/bin/repo
+RUN chmod a+x /usr/local/bin/repo
 
 RUN echo "all done."
